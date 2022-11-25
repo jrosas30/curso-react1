@@ -1,32 +1,11 @@
 import imgUno from './assets/images/img-1.jpg'
-
-const MyButton = ({ text }) => {
-
-    const handleClickButton = (title) => {
-        console.log("me diste click " + title)
-    }
-
-    return (
-        // se puede enviar parametros a la funcion creando una funcion de flecha que reciba el parametro a enviar.
-        <button onClick={() => handleClickButton(text)}>{text}</button>
-    )
-}
-
-const WelcomeText = ({ user }) => (user ? <h3>Online</h3> : <h3>Offline</h3>);
-
-
-
-
-const fruts = ['🍎', '🍐', '🍉'];
-
-const ItemFruts = ({ frut }) => {
-    return (
-        <li>{frut}</li>
-    )
-}
+import MyButton from './components/MyButton';
+import ItemFruts from './components/ItemFruts';
+import WelcomeText from './components/WelcomeText';
 
 const App = () => {
-
+    
+    const fruts = ['🍎', '🍐', '🍉'];
     const title = "mi titulo";
     const usuario = false;
 
