@@ -1,8 +1,14 @@
 import imgUno from './assets/images/img-1.jpg'
 
 const MyButton = ({ text }) => {
+
+    const handleClickButton = (title) => {
+        console.log("me diste click " + title)
+    }
+
     return (
-        <button>{text}</button>
+        // se puede enviar parametros a la funcion creando una funcion de flecha que reciba el parametro a enviar.
+        <button onClick={() => handleClickButton(text)}>{text}</button>
     )
 }
 
